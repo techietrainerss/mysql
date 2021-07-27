@@ -14,7 +14,7 @@ RUN chmod +x /config.sh
 RUN /config.sh
 
 COPY scripts/* /docker-entrypoint-initdb.d/
-RUN gunzip /docker-entrypoint-initdb.d/10-dump.sql.gz
+#RUN gunzip /docker-entrypoint-initdb.d/10-dump.sql.gz
 
 #RUN /entrypoint.sh mysqld & while [ ! -f /tmp/finished ]; do sleep 10; done
 #RUN rm /docker-entrypoint-initdb.d/*
