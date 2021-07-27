@@ -8,6 +8,7 @@ ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes \
     MYSQL_PASSWORD=secret
 
 # change datadir entry in /etc/mysql/my.cnf
+RUN pwd && ls -l
 COPY config.sh /root/
 RUN /root/config.sh
 
